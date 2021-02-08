@@ -32,3 +32,49 @@
   background:#4CAF50;
   border: 1px solid #9ba6af;
  }
+
+
+.upload-pdf{
+  display: inline-block;
+  width: 50%;
+  height: 100%;
+}
+
+
+
+ .custom-file-input::-webkit-file-upload-button {
+  visibility: hidden;
+}
+.custom-file-input::before {
+  content: 'Select some files';
+  display: inline-block;
+  padding: .375rem .75rem;
+  outline: none;
+  white-space: nowrap;
+  cursor: pointer;
+  background-color: #28a745;
+  border-color: #28a745;
+  color: white;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: .25rem;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.custom-file-input:hover::before {
+    color: #fff;
+    background-color: #218838;
+    border-color: #1e7e34;
+}
+.custom-file-input:active::before {
+  background-color: #1e7e34;
+  border-color: #1c7430;
+}
+
+.custom-file-input:focus::before {
+box-shadow: 0 0 0 0.2rem rgb(72 180 97 / 50%);
+border: none!important;
+}
+
+.custom-file-input{
+  opacity:1!important;
+}
