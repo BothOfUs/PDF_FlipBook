@@ -73,6 +73,9 @@
             </h3>
             <p class="text-justify">Transform your PDFs into HTML5 documents that have a professional look and feel, marketing tools, and analytics.</p>
             <button type="button" class="btn btn-success">Try it for Free</button>
+            <div class="upload-pdf">
+              <input type="file" id="file" name="file[]" multiple="multiple" class="custom-file-input"/>
+            </div>
           </div>
         </div>
         </div>
@@ -220,10 +223,22 @@
     
     $('#myButton,#my_Button,#my-Button,#mybutton').click(function () {
     // var redirectWindow = window.open('file:///E:/Desktop/pdf_reader/main.html', '_blank');
-    var redirectWindow = window.open('/main.html', '_blank');
+    var redirectWindow = window.open('file:///C:/Users/Amina/Desktop/BothOfUs/PDF/PDF_FlipBook/main.html', '_blank');
+    var redirectWindow = window.open('file:///C:/Users/Amina/Desktop/BothOfUs/PDF/PDF_FlipBook/main.html', '_blank');
     redirectWindow.location;
 });
 
+
+if($('#file').val() != '') {            
+      $.each($('#file').prop("files"), function(k,v){
+          var filename = v['name'];    
+          var ext = filename.split('.').pop().toLowerCase();
+          if($.inArray(ext, ['pdf','doc','docx']) == -1) {
+              alert('Please upload only pdf,doc,docx format files.');
+              return false;
+          }
+      });        
+}
   </script>
 
 
